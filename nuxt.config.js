@@ -18,7 +18,8 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' }
+			{ hid: 'description', name: 'description', content: 'Real Time $SOL (Solana) Price | Solana is a high-performance blockchain supporting builders around the world creating crypto apps that scale today.' },
+			{ hid: 'keywords', name: 'keywords', content: 'solana,sol,crypto,cryptocurrency,bitcoin,ethereum,sol price,sol price prediction,solana price,ethereum killer,dogecoin,doge' }
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -33,6 +34,7 @@ export default {
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
+		'~/plugins/bootstrap.js'
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
