@@ -1,16 +1,16 @@
 <template>
   <div class="text-center">
 	  <h1 class="display-4">
-		  <img src="https://solana.com/branding/logomark/logomark-gradient.svg" class="me-2 align-middle mb-2" style="height: 45px;"  alt="solana" />
+		  <img :src="require('~/assets/logo.png')" class="me-2 align-middle mb-2 logo" alt="solana" />
 		  Welcome to <strong class="fw-bold">Solana</strong>.sh
 	  </h1>
 	  <h1 class="display-1">
 		  <span @click="focusAmountChanger" id="amount-selector">
 			  <span class="inner" @input="solanaAmountChange" contenteditable="true">1</span> SOL
 		  </span> ≈
-		  <span class="fw-bold">${{ dollarsAmount.toFixed(2) }}</span><sup class="text-primary">+{{ priceChange24h.toFixed(2) }}%</sup>
+		  <span class="fw-bold">${{ dollarsAmount.toFixed(2) }}</span><sup class="text-primary daily-change">+{{ priceChange24h.toFixed(2) }}%</sup>
 	  </h1>
-	  <div class="d-flex justify-content-center">
+	  <div class="d-flex buttons justify-content-center">
 		  <button class="btn btn-lg d-flex align-items-center btn-primary rounded-pill text-white px-4 mt-4">
 			  <i class="bx bxs-paper-plane me-2"></i>
 			  Get Started
@@ -69,5 +69,29 @@ h1 sup
 {
 	border-bottom: 3px dashed;
 	cursor: pointer;
+}
+
+.logo
+{
+	//height: 45px;
+	height: .8em;
+}
+
+
+@media (max-width: 992px) {
+	.display-4 {
+		font-size: 1.7rem;
+	}
+
+	.daily-change
+	{
+		display: none;
+	}
+
+	.buttons
+	{
+		flex-direction: column;
+		align-items: center;
+	}
 }
 </style>
