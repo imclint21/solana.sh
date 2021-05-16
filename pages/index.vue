@@ -5,7 +5,10 @@
 		  Welcome to <strong class="fw-bold">Solana</strong>.sh
 	  </h1>
 	  <h1 class="display-1">
-		  <span class="amount-selector">1 SOL</span> ≈ <span class="fw-bold">${{ solana.market_data.current_price.usd }}</span><sup class="text-primary">+{{ solana.market_data.price_change_percentage_24h.toFixed(2) }}%</sup>
+		  <span @click="focusAmountChanger" id="amount-selector">
+			  <span class="inner" @input="solanaAmountChange" contenteditable="true">1</span> SOL
+		  </span> ≈
+		  <span class="fw-bold">${{ dollarsAmount.toFixed(2) }}</span><sup class="text-primary">+{{ priceChange24h.toFixed(2) }}%</sup>
 	  </h1>
 	  <div class="d-flex justify-content-center">
 		  <button class="btn btn-lg d-flex align-items-center btn-primary rounded-pill text-white px-4 mt-4">
@@ -25,20 +28,32 @@ export default {
 	name: "index",
 	data() {
 		return {
-			solana: {
-				market_data: {
-					current_price:{
-						usd: 0
-					},
-					price_change_percentage_24h: 0
-				}
-			}
+			amount: 1,
+			dollarsAmount: 0,
+			priceChange24h: 0
 		}
 	},
 	mounted() {
-		this.$axios.get('https://api.coingecko.com/api/v3/coins/solana').then(response => {
-			this.solana = response.data;
-		})
+		this.updatePrice();
+		setInterval(() => this.updatePrice(), 30000);
+	},
+	methods: {
+		focusAmountChanger: function () {
+			let div = document.querySelector('#amount-selector .inner');
+			div.focus();
+		},
+		solanaAmountChange: function(e) {
+			this.amount = parseFloat(e.target.innerText);
+
+			this.updatePrice();
+		},
+		updatePrice: function () {
+			this.$axios.get('https://api.coingecko.com/api/v3/coins/solana').then(response => {
+				this.amount = isNaN(this.amount) ? 1 : this.amount;
+				this.dollarsAmount = this.amount * response.data.market_data.current_price.usd;
+				this.priceChange24h = response.data.market_data.price_change_percentage_24h;
+			})
+		}
 	}
 }
 </script>
@@ -50,7 +65,7 @@ h1 sup
 	font-size: 0.5em;
 }
 
-.amount-selector:hover
+#amount-selector:hover
 {
 	border-bottom: 3px dashed;
 	cursor: pointer;
