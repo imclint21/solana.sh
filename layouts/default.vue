@@ -63,11 +63,4 @@ main {
 	display: flex;
 	align-items: center;
 }
-
-header
-{
-	//box-shadow: inset 0 30px 30px #111b2b;
-	padding-top: 2.1rem !important;
-	padding-bottom: 1rem !important;
-}
 </style>
