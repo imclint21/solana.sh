@@ -49,7 +49,7 @@ export default {
 
 .pyro
 {
-	display: none;
+	//display: none;
 	opacity: .7;
 }
 
