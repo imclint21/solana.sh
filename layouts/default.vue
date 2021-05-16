@@ -17,6 +17,18 @@
 export default {
 	created() {
 		if(process.client) {
+			// Collapsible menu
+			let bootstrap = require('bootstrap');
+			const navLinks = document.querySelectorAll('.nav-item')
+			const menuToggle = document.getElementById('navbarSupportedContent')
+			const bsCollapse = new bootstrap.Collapse(menuToggle, {
+				toggle: false
+			})
+			navLinks.forEach((l) => {
+				l.addEventListener('click', () => { bsCollapse.toggle() })
+			})
+
+			// Google
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
@@ -24,6 +36,7 @@ export default {
 			gtag('js', new Date());
 			gtag('config', 'G-PP2T0SETVX');
 
+			// Hotjar
 			(function (h, o, t, j, a, r) {
 				h.hj = h.hj || function () {
 					(h.hj.q = h.hj.q || []).push(arguments)
