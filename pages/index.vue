@@ -15,7 +15,7 @@
 			  <i class="bx bxs-coin-stack me-2"></i>
 			  Buy Solana ($SOL)
 		  </a>
-		  <button class="btn btn-lg d-flex align-items-center btn-secondary rounded-pill px-4 ms-3 mt-4">
+		  <button class="btn btn-lg d-flex align-items-center btn-secondary rounded-pill px-4 ms-lg-3 mt-4">
 <!--			  <i class="bx bxs-binoculars me-2"></i>-->
 <!--			  About Us-->
 			  <i class="bx bxs-book-content me-2"></i>
