@@ -4,7 +4,7 @@
 			API <strong class="fw-bold">Documentation</strong> 🚩
 		</h1>
 		<p class="lead">Huh, an API? Yes sure, but for what I don't yet know :D</p>
-		<p>(But if you have any idea, join on <a href="https://t.me/clintnetwork" target="_blank">me</a> on telegram)</p>
+		<p>(But if you have any idea, join <a class="text-primary text-decoration-none" href="https://t.me/clintnetwork" target="_blank">me</a> on telegram)</p>
 	</div>
 </template>
 
