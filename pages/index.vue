@@ -87,7 +87,9 @@ h1 sup
 
 	.daily-change
 	{
-		display: none;
+		display: block;
+		top: 0;
+		margin: 1rem;
 	}
 
 	.buttons
