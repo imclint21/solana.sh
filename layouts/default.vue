@@ -17,6 +17,13 @@
 export default {
 	created() {
 		if(process.client) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-PP2T0SETVX');
+
 			(function (h, o, t, j, a, r) {
 				h.hj = h.hj || function () {
 					(h.hj.q = h.hj.q || []).push(arguments)

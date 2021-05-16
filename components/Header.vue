@@ -40,10 +40,12 @@
 				</ul>
 			</div>
 			<div class="w-25 text-end d-none d-lg-block">
-				<button class="btn btn-primary px-4 text-white rounded-pill">
-					<i class="bx bxs-paper-plane me-1"></i>
-					Get Started
-				</button>
+				<a href="https://accounts.binance.cc/en/register?ref=57620695 " target="_blank" class="btn btn-primary px-4 text-white rounded-pill">
+<!--					<i class="bx bxs-paper-plane me-1"></i>-->
+<!--					Get Started-->
+					<i class="bx bxs-coin-stack me-2"></i>
+					Buy Solana ($SOL)
+				</a>
 			</div>
 		</div>
 	</header>
