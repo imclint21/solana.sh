@@ -1,5 +1,5 @@
 <template>
-	<div class="text-center">
+	<div class="text-center px-3 text-break">
 		<h1 class="display-4">
 <!--			<img src="https://solana.com/branding/logomark/logomark-gradient.svg" class="me-2 align-middle mb-2" style="height: 45px;"  alt="solana" />-->
 			About <strong class="fw-bold">Solana</strong>.sh 👋
