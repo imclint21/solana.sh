@@ -1,0 +1,105 @@
+@import "fireworks";
+@import "~bootstrap/scss/functions";
+
+$body-bg: #141f34;
+$primary: #dc1fff;
+$body-color: #eeeeee;
+
+// Light Theme
+$body-bg: #ffffff;
+$body-color: #2f495e;
+
+:root {
+	--body-bg: $body-bg;
+	--body-color: $body-color;
+}
+
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $body-color,
+	//"secondary": #00ffa3,
+	"success": $primary,
+	"danger": #c62553,
+	"warning": #c6ab25,
+	"white": #ffffff,
+	"muted": #97afd5,
+	"light": tint-color($body-bg, 10%),
+	"dark": $body-bg
+);
+
+$container-max-widths: (
+	xl: 1150px
+);
+
+$btn-link-color: #ffffff;
+
+$navbar-dark-color: rgba($body-color, .8);
+$navbar-dark-hover-color: $body-color;
+$navbar-dark-active-color: $body-color;
+
+$link-color: #ffffff;
+$link-hover-color: #ffffff;
+$nav-link-color: $primary;
+
+$alert-bg-scale: -0%;
+$alert-border-scale: 0%;
+$alert-color-scale: 70%;
+
+//$card-border-radius: 1.1rem;
+$card-bg: tint-color($body-bg, 5%);
+//$card-cap-bg: $body-bg;
+
+$list-group-bg: tint-color($body-bg, 5%);
+$list-group-color: $body-color;
+$list-group-border-color: tint-color($body-bg, 10%);
+
+$accordion-border-color: tint-color($body-bg, 10%);
+$accordion-button-active-bg: $body-bg;
+
+$modal-md: 400px;
+$modal-content-color: $body-color;
+$btn-close-color: $body-color;
+$modal-content-bg: tint-color($body-bg, 5%);
+//$modal-content-border-radius:       .7rem;
+$modal-content-box-shadow-xs: 0 1rem 3rem #ff0000;
+$modal-content-box-shadow-sm-up: 0 1rem 3rem #ff0000;
+$modal-header-border-color: transparent;
+$modal-footer-border-color: transparent;
+$modal-backdrop-bg: $body-bg;
+$modal-backdrop-opacity: .7;
+
+$input-bg: tint-color($body-bg, 10%);
+//$input-disabled-bg:                     $gray-200;
+//$input-disabled-border-color:           null;
+//$input-color:                           $body-color;
+//$input-border-color:                    $gray-400;
+$input-border-width: 0;
+//$input-box-shadow:                      $box-shadow-inset;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+	//border-top: 3px solid $primary;
+	//box-shadow: inset 0 0 7vh rgb(12 19 29 / 44%);
+	//box-shadow: inset -10px 20px 30px #0c141f;
+}
+
+@media (min-width: 1200px) {
+	.container-fluid {
+		max-width: 95vw;
+	}
+}
+
+@media (min-width: 992px) {
+	.container-fluid {
+		max-width: 77vw;
+	}
+}
+
+.text-inherit,
+.text-inherit:hover,
+.text-inherit:focus,
+{
+	color: inherit;
+	text-decoration: inherit;
+}
