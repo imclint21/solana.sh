@@ -20,7 +20,7 @@ export default {
 			{name: 'viewport', content: 'width=device-width, initial-scale=1; user-scalable=no'},
 			{name: 'twitter:image:src', content: 'https://solana.sh/preview.png'},
 			{name: 'twitter:card', content: 'summary_large_image'},
-			{name: 'og:image', content: 'https://soalana.sh/preview.png'},
+			{name: 'og:image', content: 'https://solana.sh/preview.png'},
 			{name: 'theme-color', content: '#dc1fff'},
 			{name: 'msapplication-navbutton-color', content: '#dc1fff'},
 			{name: 'apple-mobile-web-app-status-bar-style', content: '#dc1fff'},
