@@ -1,7 +1,8 @@
 <template>
 	<div id="app" class="d-flex flex-column vh-100">
 		<div class="overlay"></div>
-		<div class="pyro">
+		<Rain v-if="isRaining" />
+		<div v-else class="pyro">
 			<div class="before"></div>
 			<div class="after"></div>
 		</div>
@@ -15,8 +16,17 @@
 
 <script>
 export default {
-	created() {
+	data() {
+		return {
+			isRaining: false
+		}
+	},
+	mounted() {
 		if(process.client) {
+			this.$axios.get('https://api.coingecko.com/api/v3/coins/solana').then(response => {
+				this.isRaining = response.data.market_data.price_change_percentage_24h <= 0;
+			});
+
 			// Collapsible menu
 			let bootstrap = require('bootstrap');
 			const navLinks = document.querySelectorAll('.nav-item')
@@ -26,7 +36,7 @@ export default {
 			})
 			navLinks.forEach((l) => {
 				l.addEventListener('click', () => { bsCollapse.toggle() })
-			})
+			});
 
 			// Google
 			window.dataLayer = window.dataLayer || [];
