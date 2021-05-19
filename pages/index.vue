@@ -8,7 +8,7 @@
 		  <span @click="focusAmountChanger" id="amount-selector">
 			  <span class="inner" @input="solanaAmountChange" contenteditable="true">1</span> SOL
 		  </span> ≈
-		  <span class="fw-bold">${{ dollarsAmount.toFixed(2) }}</span><sup class="text-primary daily-change">+{{ priceChange24h.toFixed(2) }}%</sup>
+		  <span class="fw-bold">${{ dollarsAmount.toFixed(2) }}</span><sup class="text-primary daily-change">{{ priceChange24h > 0 ? "+" : "" }}{{ priceChange24h.toFixed(2) }}%</sup>
 	  </h1>
 	  <div class="d-flex buttons justify-content-center">
 		  <a href="https://accounts.binance.cc/en/register?ref=57620695 " target="_blank" class="btn btn-lg d-flex align-items-center btn-primary rounded-pill text-white px-4 mt-4">
