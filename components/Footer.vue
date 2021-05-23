@@ -5,7 +5,7 @@
 				<div class="col d-flex text-center justify-content-center align-items-center">
 					<p class="mb-0">Copyright &copy; {{ new Date().getFullYear() }} Solana.sh - Crafted with 💜 by Clint.network -
 						<i class="bx bxl-github ms-1"></i>
-						Fork me on <a class="text-decoration-none" href="https://github.com/chianetspace/chianetspace" target="_blank">GitHub</a>
+						Fork me on <a class="text-primary text-decoration-none" href="https://github.com/clintnetwork/solana.sh" target="_blank">GitHub</a>
 					</p>
 				</div>
 			</div>
