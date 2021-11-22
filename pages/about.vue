@@ -7,7 +7,7 @@
 		<p class="lead">Hey, I'm Clint! Solana.sh is born during the night of 15 May 2021.</p>
 		<p>What is it? Hmm little bit hard to said, for now just a price ticket, but it will evolve!</p>
 		<p class="lead mt-5">
-			If you want to send me a tips:<br /> <a href="https://explorer.solana.com/address/7X1ex1EaW9GM5Fxt5X7qgCLxSePa2piu3NBq2GiM7yuL" target="_blank" class="text-primary text-decoration-none fw-bold">7X1ex1EaW9GM5Fxt5X7qgCLxSePa2piu3NBq2GiM7yuL</a>
+			If you want to send me a tips:<br /> <a href="https://explorer.solana.com/address/7ApoFdJHk5z4M2t2aZNXDmR5D1F5sMK7GSdzAAG46FvV" target="_blank" class="text-primary text-decoration-none fw-bold">7ApoFdJHk5z4M2t2aZNXDmR5D1F5sMK7GSdzAAG46FvV</a>
 			<sup><i class="bx bx-link-external"></i></sup>
 		</p>
 		<div class="d-flex buttons mt-4 justify-content-center">
