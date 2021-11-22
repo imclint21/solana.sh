@@ -1,5 +1,6 @@
 <template>
 	<div id="app" class="d-flex flex-column vh-100">
+		<Ads />
 		<div class="overlay"></div>
 		<Rain v-if="isRaining" />
 		<div v-else class="pyro">
@@ -80,13 +81,18 @@ export default {
 {
 	//box-shadow: inset 0 0 210px rgba(0,0,0,0.71);
 	//background-image: url("https://i.imgur.com/ml6im0o.png");
-	//position: absolute;
-	//z-index: -1;
-	//top: 0;
-	//left: 0;
-	//width: 100%;
-	//height: 100%;
-	//filter: blur(21px) brightness(100%);
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(21px) brightness(100%);
+}
+
+canvas
+{
+	z-index: -1;
 }
 
 main {
